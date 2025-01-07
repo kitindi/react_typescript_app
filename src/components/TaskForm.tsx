@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
 
-const TaskForm = ({ tasks, handleAddTask }) => {
+type AddTaskForm = { handleAddTask: (taskName: string) => void };
+
+const TaskForm = ({ handleAddTask }: AddTaskForm) => {
   const [taskName, setTaskName] = useState("");
   return (
     <div className="w-full h-[50vh] flex flex-col">

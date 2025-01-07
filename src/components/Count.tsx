@@ -1,11 +1,12 @@
-import React from "react";
+import { HeaderProps } from "./Header";
 
-const Count = ({ tasks }) => {
+type CountProps = HeaderProps;
+const Count = ({ numberOfCompleted, totalNumberofTasks }: CountProps) => {
   return (
     <div>
       <p className="text-[#fefefe] text-sm">
         {" "}
-        {tasks.filter((task) => task.completed).length} / {tasks.length} Tasks completed{" "}
+        {numberOfCompleted}/ {totalNumberofTasks} Tasks completed{" "}
       </p>
     </div>
   );

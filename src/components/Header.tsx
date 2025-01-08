@@ -1,10 +1,5 @@
-import React from "react";
+import { HeaderProps } from "../lib/types";
 import Count from "./Count";
-
-export type HeaderProps = {
-  numberOfCompleted: number;
-  totalNumberofTasks: number;
-};
 
 const Header = ({ numberOfCompleted, totalNumberofTasks }: HeaderProps) => {
   return (

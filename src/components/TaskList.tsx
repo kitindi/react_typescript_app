@@ -1,4 +1,4 @@
-import { tasksType } from "../App";
+import { tasksType } from "../lib/types";
 
 type TaskListProps = {
   tasks: tasksType[];

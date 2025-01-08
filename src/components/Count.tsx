@@ -1,4 +1,4 @@
-import { HeaderProps } from "./Header";
+import { HeaderProps } from "../lib/types";
 
 type CountProps = HeaderProps;
 const Count = ({ numberOfCompleted, totalNumberofTasks }: CountProps) => {

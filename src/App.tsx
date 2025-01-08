@@ -2,9 +2,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import TaskList from "./components/TaskList";
 import { useState } from "react";
-// define the type of the tasks
-export type tasksType = { id: number; name: string; completed: boolean };
-// export type tasksType = { id: number; name: string; completed: boolean }[];
+import { tasksType } from "./lib/types";
 
 function App() {
   // states

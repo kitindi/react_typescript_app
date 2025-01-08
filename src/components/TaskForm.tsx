@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "./Button";
 
-type AddTaskForm = { handleAddTask: (taskName: string) => void };
+import { useTasksContext } from "../lib/hooks";
 
-const TaskForm = ({ handleAddTask }: AddTaskForm) => {
+const TaskForm = () => {
   const [taskName, setTaskName] = useState("");
+
+  const { handleAddTask } = useTasksContext();
   return (
     <div className="w-full h-[50vh] flex flex-col">
       <form

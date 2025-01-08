@@ -1,7 +1,7 @@
-import { HeaderProps } from "../lib/types";
+import { useTasksContext } from "../lib/hooks";
 
-type CountProps = HeaderProps;
-const Count = ({ numberOfCompleted, totalNumberofTasks }: CountProps) => {
+const Count = () => {
+  const { totalNumberofTasks, numberOfCompleted } = useTasksContext();
   return (
     <div>
       <p className="text-[#fefefe] text-sm">

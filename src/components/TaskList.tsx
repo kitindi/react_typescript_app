@@ -1,12 +1,8 @@
-import { tasksType } from "../lib/types";
+import { useTasksContext } from "../lib/hooks";
 
-type TaskListProps = {
-  tasks: tasksType[];
-  handleToggleTask: (id: number) => void;
-  handleDeleteTask: (id: number) => void;
-};
+const TaskList = () => {
+  const { tasks, handleDeleteTask, handleToggleTask } = useTasksContext();
 
-const TaskList = ({ tasks, handleToggleTask, handleDeleteTask }: TaskListProps) => {
   return (
     <div className="mt-5">
       <ul className="p-4 flex flex-col gap-2">
